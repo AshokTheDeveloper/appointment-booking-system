@@ -4,7 +4,7 @@ import "./AppointmentItem.css";
 
 const AppointmentItem = (props) => {
   const { appointment, updateAppointment, cancelAppointment } = props;
-  const { patientName, appointmentType, date, _id } = appointment;
+  const { patientName, appointmentType, duration, date, _id } = appointment;
 
   const formattedDate = format(date, "yyyy-MM-dd");
   const formattedTime = format(date, "HH:mm");
@@ -26,6 +26,10 @@ const AppointmentItem = (props) => {
       <p className="text-dark">
         <span>Appointment Type: </span>
         <span className="bold">{appointmentType}</span>
+      </p>
+      <p className="text-dark">
+        <span>Duration: </span>
+        <span className="bold">{duration}</span>
       </p>
       <p className="text-dark">
         <span>Date: </span>
