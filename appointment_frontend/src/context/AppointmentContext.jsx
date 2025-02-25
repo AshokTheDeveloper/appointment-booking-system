@@ -3,7 +3,7 @@ import { createContext } from "react";
 export const appointmentContext = createContext();
 
 export const ContextProvider = (props) => {
-  const apiUrl = "http://localhost:3003/doctors";
+  const apiUrl = "https://appointment-booking-system-l99p.onrender.com";
   const value = {
     apiUrl,
   };
