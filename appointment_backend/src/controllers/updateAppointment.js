@@ -19,7 +19,7 @@ const updateAppointment = async (req, res) => {
         .json({ message: "Required all the fields", success: false });
     }
 
-    if (![30, 60].includes(duration)) {
+    if (typeof duration !== "number" || ![30, 60].includes(duration)) {
       return res.status(400).json({
         message: "Duration should be either 30 or 60 minutes.",
         success: false,

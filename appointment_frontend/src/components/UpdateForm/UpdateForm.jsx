@@ -88,7 +88,7 @@ const UpdateForm = ({ formData, submit, close }) => {
       doctorId,
       patientName,
       appointmentType,
-      duration,
+      duration: parseInt(duration),
       date: formattedDateTime,
     };
 

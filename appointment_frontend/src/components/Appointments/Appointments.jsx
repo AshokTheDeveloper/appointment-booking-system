@@ -134,6 +134,7 @@ const Appointments = () => {
   };
 
   const handleUpdateFormSubmission = async (dataObj) => {
+    console.log("forms: ", dataObj);
     const { _id } = dataObj;
     const url = `${apiUrl}/appointments/${_id}`;
     const options = {
