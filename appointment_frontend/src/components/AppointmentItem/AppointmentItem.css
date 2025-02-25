@@ -1,0 +1,39 @@
+.appointment-card {
+  width: 100%;
+  padding-left: 8%;
+  background-image: linear-gradient(
+    135deg,
+    rgb(211, 254, 255),
+    rgb(255, 229, 240)
+  );
+  position: relative;
+}
+
+.appointment-card p {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+}
+
+p span {
+  font-weight: 600;
+}
+
+p .bold {
+  font-weight: 500;
+}
+
+.appointment-buttons {
+  display: flex;
+  gap: 5px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.appointment-buttons button {
+  width: 80px;
+  background-color: rgb(255, 94, 188);
+  background-color: rgb(35, 123, 255);
+  padding: 2px 4px;
+  border-radius: 4px;
+}

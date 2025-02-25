@@ -1,0 +1,52 @@
+###
+GET http://localhost:3003/doctors
+
+###
+GET http://localhost:3003/doctors/67bb469ffe8917fb6478ef96/slots?date=2025-03-10
+
+###
+POST http://localhost:3003/doctors
+Content-Type: application/json
+
+  {
+    "name": "Dr. Elijah Adams",
+    "workingHours": { "start": "10:30", "end": "18:30" },
+    "specialization": "Genetic Counselor"
+  }
+
+
+###
+GET http://localhost:3003/doctors/appointments
+
+###
+GET http://localhost:3003/doctors/appointments/67bb5e32c2fddf5dc8ead20d
+
+###
+POST http://localhost:3003/doctors/appointments
+Content-Type: application/json
+
+  {
+    "doctorId": "67bb47d2fe8917fb6478efb6",
+    "date": "2025-03-20T11:00:00.000Z",
+    "duration": 30,
+    "appointmentType": "General Consultation",
+    "patientName": "Emily Davis",
+    "notes": "Questions about prenatal vitamins"
+  }
+
+
+###
+PUT http://localhost:3003/doctors/appointments/67bb5cb7c2fddf5dc8ead1fc
+Content-Type: application/json
+
+{
+  "doctorId": "67bb4452b248eccf915b825a",
+  "date": "2025-03-10T10:00:00.000Z",
+  "duration": 60,
+  "appointmentType": "Routine Check-Up",
+  "patientName": "John Doe",
+  "notes": "Monthly visit"
+}
+
+###
+DELETE  http://localhost:3003/doctors/appointments/67bb56f4f18bc8ecec14e069
